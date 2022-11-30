@@ -1,0 +1,55 @@
+/* regole generali */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+
+/* regole header */
+
+#app{
+    position: relative;
+}
+
+header{
+    height: 100px;
+    background-color: #009688;
+}
+
+/* regole main */
+
+main{
+    height: calc(100vh - 100px);
+    background-color: #dbdbd2;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    height: calc(100vh - 30px);
+    display: flex;
+    /* debug */
+    border: 1px solid black;
+}
+
+.contacts{
+    width: 390px;
+    /* debug */
+    background-color: coral;
+}
+
+.chat{
+    width: 100%;
+    /* debug */
+    background-color: cornflowerblue;
+}
