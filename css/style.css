@@ -43,6 +43,7 @@ main{
     border: 1px solid black;
 }
 
+/* regole section contacts */
 .contacts{
     width: 490px;
     background-color: #fff;
@@ -139,6 +140,7 @@ main{
     border-width: 1px;
 }
 
+/* regole section chat */
 .chats{
     height: calc(100% - 148px);
     overflow-y: auto;
@@ -165,9 +167,9 @@ main{
 .chat-message{
     display: flex;
     padding: 15px;
-    /* debug */
-    /* background-color: #e9ebeb; */
 }
+
+
 
 .info-chat{
     margin-left: 15px;
@@ -181,9 +183,42 @@ main{
 .conversation{
     height: calc(100% - 50px - 60px);
     overflow-y: auto;
-    /* debug */
-    background-color: cornflowerblue;
 }
+
+/* regole conversation */
+
+.conversation{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 70px;
+}
+
+.conversation div, .answer div{
+    min-width: 250px;
+    border-radius: 10px;
+}
+
+.my-txt{
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.answer{
+    background-color: #fff;
+    align-self: flex-start;
+}
+
+.box{
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+.time{
+    font-size: 8px;
+    text-align: right;
+}
+
+/* regole area-message */
 .area-message{
     height: 60px;
     background-color: #f3eeea;
