@@ -40,6 +40,10 @@ main{
     display: flex;
 }
 
+i{
+    cursor: pointer;
+}
+
 /* regole section contacts */
 .contacts{
     width: 30%;
@@ -55,10 +59,11 @@ main{
     height: 50px;
     background-color: #eaeaea;
     border-left: 1px solid #dddddd;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center ;
-    padding: 0 15px;
+    cursor: pointer;
 }
 
 #user{
@@ -120,7 +125,7 @@ main{
 .search input{
     width: 100%;
     height: 30px;
-    border-color: #b1b1b1 #b1b1b1 #b1b1b1  white;
+    border-color: #b1b1b1 #b1b1b1 #b1b1b1 white;
     padding-left: 15px;
 }
 
@@ -166,6 +171,9 @@ main{
     padding: 15px;
 }
 
+.chat-message:hover{
+    background-color: #e9ebeb;
+}
 .chat-info{
     display: flex;
 }

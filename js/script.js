@@ -170,10 +170,11 @@ createApp({
                     }
                 ],
             }
+            
         ]
         
       }
     },
     // methods:
-
+    
   }).mount('#app');
