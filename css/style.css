@@ -38,8 +38,6 @@ main{
     top: 15px;
     bottom: 15px;
     display: flex;
-    /* debug */
-    border: 1px solid black;
 }
 
 /* regole section contacts */
