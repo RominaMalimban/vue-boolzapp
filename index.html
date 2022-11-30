@@ -53,7 +53,10 @@
                     
                     <!-- list chats -->
                     <div class="chats">
-                        <div v-for="contact in contacts" class="chat-message avatar">
+                        <div 
+                        v-for="contact in contacts"
+                        class="chat-message avatar">
+                            
                             <div class="chat-info">
                                 <img :src="contact.avatar" :alt="'immagine di ' + contact.name">
                                 <div class="info-chat">
@@ -90,13 +93,13 @@
 
                     </div>
                     
-                    <div class="conversation" v-for="contact in contacts">
+                    <div class="conversation">
                        
                         <div 
-                            v-for="info in contact.messages" 
-                            :class="info.status === 'sent' ? 'my-txt' : 'answer'" 
-                            class="box" 
-                        >
+                        v-for="info in contacts[activeUser].messages" 
+                        :class="info.status === 'sent' ? 'my-txt' : 'answer'" 
+                        class="box">
+                        
                             <div>{{info.message}}</div> 
                             <div class="time">12:00</div> 
 
