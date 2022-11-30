@@ -17,6 +17,8 @@ img{
 
 #app{
     position: relative;
+    background-color: #dbdbd2;
+    height: 100vh;
 }
 
 header{
@@ -28,7 +30,6 @@ header{
 
 main{
     height: calc(100vh - 100px);
-    background-color: #dbdbd2;
     display: flex;
     justify-content: center;
 }
@@ -38,7 +39,6 @@ main{
     position: absolute;
     top: 15px;
     bottom: 15px;
-    height: calc(100vh - 30px);
     display: flex;
     /* debug */
     border: 1px solid black;
@@ -46,8 +46,7 @@ main{
 
 .contacts{
     width: 490px;
-    /* debug */
-    background-color: coral;
+    background-color: #fff;
 }
 
 .chat{
@@ -78,7 +77,7 @@ main{
 
 #user span{
     margin-left: 5px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .icons{
@@ -140,4 +139,32 @@ main{
     border-style: solid;
     border-width: 1px;
 }
-                    
+
+.chats{
+    height: calc(100% - 148px);
+    overflow-y: auto;
+}
+
+.chat-avatar{
+    display: flex;
+    align-items: center;
+}
+
+.chat-avatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.info-avatar{
+    margin-left: 5px;
+}
+.avatar-name{
+    font-size: 13px;
+    display: block;
+}
+
+.last-access{
+    font-size: 12px;
+    color: #919191;
+}
