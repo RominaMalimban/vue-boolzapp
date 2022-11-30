@@ -3,6 +3,10 @@ const { createApp } = Vue;
 createApp({
     data() {
       return {
+        user: {
+            avatar: 'img/avatar_io.jpg',
+            name: 'Romina'
+        },
         contacts: [
             {
                 name: 'Michele',
@@ -168,5 +172,7 @@ createApp({
         ]
         
       }
-    }
+    },
+    // methods:
+    
   }).mount('#app');

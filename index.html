@@ -24,8 +24,8 @@
                     <div class="top-main">
                        
                         <div id="user" class="avatar">
-                            <img src="img/avatar_io.jpg" alt="avatar user">
-                            <span>Romina</span>
+                            <img :src="user.avatar" alt="avatar user">
+                            <span>{{user.name}}</span>
                         </div>
                         
 
@@ -53,9 +53,9 @@
                     
                     <!-- list chats -->
                     <div class="chats">
-                        <div class="chat-message avatar" v-for="contact in contacts">
+                        <div v-for="contact in contacts"class="chat-message avatar" >
                             <div class="chat-info">
-                                <img :src="contact.avatar" alt="avatar 2">
+                                <img :src="contact.avatar" alt="">
                                 <div class="info-chat">
                                     <div class="avatar-name">{{contact.name}}</div>
                                     <div class="info-text">Ultimo messaggio inviato</div>
@@ -142,8 +142,8 @@
                                 </div>
                             </div>
                            
-                            <div class="time-last-message">12:00</div> -->
-                        </div>
+                            <div class="time-last-message">12:00</div>
+                        </div> -->
                     </div>
                 </section>
                 <!-- chiusura sezione contatti -->
