@@ -18,7 +18,6 @@ img{
 #app{
     position: relative;
     background-color: #dbdbd2;
-    /* height: 100vh; */
 }
 
 header{
@@ -140,9 +139,8 @@ main{
     border-width: 1px;
 }
 
-/* regole section chat */
 .chats{
-    height: calc(100% - 148px);
+    height: calc(100vh - 100px - 148px);
     overflow-y: auto;
 }
 
@@ -183,17 +181,13 @@ main{
     font-size: 11px;
 }
 
-.conversation{
-    height: calc(100% - 50px - 60px);
-    overflow-y: auto;
-}
-
-/* regole conversation */
-
+/* regole section chat */
 .conversation{
     display: flex;
     flex-direction: column;
     padding: 40px 70px;
+    height: calc(100% - 50px - 60px);
+    overflow-y: auto;
 }
 
 .conversation div, .answer div{
@@ -219,6 +213,7 @@ main{
 .time{
     font-size: 8px;
     text-align: right;
+    color: #999da0;
 }
 
 /* regole area-message */
