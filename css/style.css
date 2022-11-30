@@ -44,12 +44,12 @@ main{
 
 /* regole section contacts */
 .contacts{
-    width: 490px;
+    width: 30%;
     background-color: #fff;
 }
 
 .chat{
-    width: 100%;
+    width: 70%;
     background-image: url(../img/mine.jpg);
 }
 
