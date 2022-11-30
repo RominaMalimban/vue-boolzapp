@@ -53,7 +53,7 @@
                     
                     <!-- list chats -->
                     <div class="chats">
-                        <div v-for="contact in contacts"class="chat-message avatar" >
+                        <div v-for="contact in contacts" class="chat-message avatar" >
                             <div class="chat-info">
                                 <img :src="contact.avatar" alt="">
                                 <div class="info-chat">
@@ -170,16 +170,19 @@
 
                     </div>
                     
-                    <div class="conversation">
-                        <div class="box my-txt">
+                    <div class="conversation" v-for="contact in contacts">
+                       
+                        <div v-for="info in contact.messages" 
+                        :class="info.status === 'sent' ? 'my-txt' : 'answer'" 
+                        class="box" >
                             <div>
-                                Hai portato a spasso il cane
+                                {{info.message}}
                             </div> 
                             <div class="time">
                                 12:00
                             </div> 
                         </div>
-                        <div class="box my-txt">
+                        <!-- <div class="box my-txt">
                             <div>
                                 Ricordati di stendere i panni
                             </div> 
@@ -194,7 +197,7 @@
                             <div class="time">
                                 12:00
                             </div> 
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="area-message">
