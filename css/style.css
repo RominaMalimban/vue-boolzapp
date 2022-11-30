@@ -166,16 +166,19 @@ main{
 
 .chat-message{
     display: flex;
+    justify-content: space-between;
     padding: 15px;
 }
 
-
+.chat-info{
+    display: flex;
+}
 
 .info-chat{
     margin-left: 15px;
 }
 
-.info-text{
+.info-text, .time-last-message{
     color: #999da0;
     font-size: 11px;
 }
