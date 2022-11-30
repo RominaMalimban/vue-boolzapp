@@ -51,5 +51,24 @@ main{
 .chat{
     width: 100%;
     /* debug */
-    background-color: cornflowerblue;
+    background-image: url(../img/mine.jpg);
 }
+
+.top-main{
+    height: 50px;
+    background-color: #eaeaea;
+    border-left: 1px solid #dddddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.icons{
+    color: #b1b1b1;
+    padding: 0 15px;
+}
+
+.icons .center-icon{
+    margin-inline: 15px;
+}
+                    
