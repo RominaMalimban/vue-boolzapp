@@ -138,7 +138,7 @@ main{
 }
 
 .chats{
-    height: calc(100vh - 100px - 148px);
+    height: calc(100% - 148px);
     overflow-y: auto;
 }
 
