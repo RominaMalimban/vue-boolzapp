@@ -4,6 +4,7 @@ createApp({
     data() {
       return {
         activeChat:0,
+        newMessage : "",
         user: {
             avatar: 'img/avatar_io.jpg',
             name: 'Romina'
@@ -178,9 +179,23 @@ createApp({
     //METHODS:
     methods :{
         // Click sul contatto mostro la conversazione del contatto cliccato:
-    clickChat(index){
-        this.activeChat = index;
-    }
+        clickChat(index){
+            this.activeChat = index;
+        },
+
+        // Aggiunta di un messaggio:
+        sendNewMessage(){
+            this.contacts[this.activeChat].messages.push(
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+            );
+
+            // ad ogni invio, svuoto l'input: 
+            this.newMessage = "";
+        }
     }
     
   }).mount('#app');
