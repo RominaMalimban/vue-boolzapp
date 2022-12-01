@@ -45,10 +45,14 @@
                         </div>
                     </div>
 
-                    <!-- search -->
+                    <!-- search contacts -->
                     <div class="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input 
+                        type="text" 
+                        placeholder="Cerca o inizia una nuova chat"
+                        v-model="searchContact"
+                        @keyup.enter ="findNewContact">
                     </div>
                     
                     <!-- list chats -->
@@ -80,9 +84,9 @@
                     <div class="top-main">
                         
                         <div class="chat-avatar avatar">
-                            <img src="img/avatar_1.jpg" alt="avatar chat">
+                            <img :src="contacts[activeChat].avatar" alt="avatar chat">
                             <div class="info-avatar">
-                                <div class="avatar-name">Michele</div>
+                                <div class="avatar-name">{{contacts[activeChat].name}}</div>
                                 <div class="last-access">Ultimo accesso oggi alle 21</div>
                             </div>
                         </div>

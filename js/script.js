@@ -5,6 +5,7 @@ createApp({
       return {
         activeChat:0,
         newMessage : "",
+        searchContact : "",
         user: {
             avatar: 'img/avatar_io.jpg',
             name: 'Romina'
@@ -169,13 +170,12 @@ createApp({
                         message: 'OK!!',
                         status: 'received'
                     }
-                ],
-            }
-            
+                ]
+            } 
         ]
-        
-      }
+      };
     },
+
     //METHODS:
     methods :{
         // Click sul contatto mostro la conversazione del contatto cliccato:
@@ -205,10 +205,17 @@ createApp({
             this.contacts[this.activeChat].messages.push(
                 {
                     date: '10/01/2020 15:30:55',
-                    message: 'ok',
+                    message: 'ok, va bene ',
                     status: 'received'
                 }
             );
+        },
+
+        // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite:
+        findNewContact(){
+            if(this.contacts.name.includes(this. searchContact)){
+                visible = false
+            }
         }
     }
     
