@@ -192,9 +192,23 @@ createApp({
                     status: 'sent'
                 }
             );
-
-            // ad ogni invio, svuoto l'input: 
+            
+            // ad ogni invio, svuoto l'input:
             this.newMessage = "";
+
+            // la risposta apparirà dopo 1 secondo:
+            setTimeout(this.receiveNewMessage, 1000);
+        },
+
+        // Risposta dall’interlocutore: l’utente riceverà un “ok” come risposta:
+        receiveNewMessage(){
+            this.contacts[this.activeChat].messages.push(
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: 'ok',
+                    status: 'received'
+                }
+            );
         }
     }
     
