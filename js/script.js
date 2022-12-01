@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
       return {
-        activeUser:0,
+        activeChat:0,
         user: {
             avatar: 'img/avatar_io.jpg',
             name: 'Romina'
@@ -175,5 +175,12 @@ createApp({
         
       }
     },
-    // methods:
+    //METHODS:
+    methods :{
+        // Click sul contatto mostro la conversazione del contatto cliccato:
+    clickChat(index){
+        this.activeChat = index;
+    }
+    }
+    
   }).mount('#app');

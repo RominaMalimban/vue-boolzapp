@@ -54,8 +54,11 @@
                     <!-- list chats -->
                     <div class="chats">
                         <div 
-                        v-for="contact in contacts"
-                        class="chat-message avatar">
+                        v-for="(contact, index) in contacts"
+                        class="chat-message avatar"
+                        @click="clickChat(index)"
+                        :class="activeChat === index ? 'active' : ''"
+                        >
                             
                             <div class="chat-info">
                                 <img :src="contact.avatar" :alt="'immagine di ' + contact.name">
@@ -73,6 +76,7 @@
 
                 <!-- section conversazione -->
                 <section class="chat">
+
                     <div class="top-main">
                         
                         <div class="chat-avatar avatar">
@@ -81,10 +85,8 @@
                                 <div class="avatar-name">Michele</div>
                                 <div class="last-access">Ultimo accesso oggi alle 21</div>
                             </div>
-                            
                         </div>
                         
-
                         <div class="icons">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip center-icon"></i>
@@ -94,9 +96,8 @@
                     </div>
                     
                     <div class="conversation">
-                       
                         <div 
-                        v-for="info in contacts[activeUser].messages" 
+                        v-for="info in contacts[activeChat].messages" 
                         :class="info.status === 'sent' ? 'my-txt' : 'answer'" 
                         class="box">
                         
