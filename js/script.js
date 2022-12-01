@@ -212,11 +212,7 @@ createApp({
         },
 
         // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite:
-        findNewContact(){
-            if(this.contacts.name.includes(this. searchContact)){
-                visible = false
-            }
-        }
+        
     }
     
   }).mount('#app');
