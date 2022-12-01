@@ -212,7 +212,15 @@ createApp({
         },
 
         // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite:
-        
+        findContact(){
+            for(let i = 0; i < this.contacts.length; i++){
+                if(this.contacts[i].name.toLowerCase().includes(this.searchContact.toLowerCase())){
+                    this.contacts[i].visible = true;
+                }else{
+                    this.contacts[i].visible = false;
+                }
+            }
+        }
     }
     
   }).mount('#app');

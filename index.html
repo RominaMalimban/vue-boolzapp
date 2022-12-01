@@ -53,7 +53,8 @@
                         <input 
                         type="text" 
                         placeholder="Cerca o inizia una nuova chat"
-                        v-model="searchContact">
+                        v-model="searchContact"
+                        @keyup="findContact()">
                     </div>
                     
                     <!-- list chats -->
@@ -61,10 +62,10 @@
 
                         <!-- gestione elenco chat -->
                         <div 
-                        v-for="(contact, index) in contacts"
                         class="chat-message avatar"
+                        v-for="(contact, index) in contacts"
                         @click="clickChat(index)"
-                        :class="activeChat === index ? 'active' : ''"
+                        :class="contact.visible ? '' : 'd-none'"
                         >
                             
                             <div class="chat-info">

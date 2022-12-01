@@ -170,7 +170,7 @@ i{
     padding: 15px;
 }
 
-.active{
+.chat-message:hover{
     background-color: #e9ebeb;
 }
 
@@ -241,4 +241,8 @@ i{
     margin-inline: 15px;
     height: 40px;
     padding: 5px;
+}
+
+.d-none{
+    display: none;
 }
