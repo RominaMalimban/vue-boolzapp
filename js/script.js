@@ -176,14 +176,15 @@ createApp({
       };
     },
 
-    //METHODS:
+    //******************METHODS*********************:
     methods :{
+
         // Click sul contatto mostro la conversazione del contatto cliccato:
         clickChat(index){
             this.activeChat = index;
         },
 
-        // Aggiunta di un messaggio:
+        // Aggiunta di un messaggio: 
         sendNewMessage(){
             this.contacts[this.activeChat].messages.push(
                 {
@@ -218,9 +219,10 @@ createApp({
                     this.contacts[i].visible = true;
                 }else{
                     this.contacts[i].visible = false;
-                }
-            }
-        }
+                };
+            };
+        },
+
     }
     
   }).mount('#app');

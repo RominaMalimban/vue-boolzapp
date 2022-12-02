@@ -111,7 +111,15 @@
                         :class="info.status === 'sent' ? 'my-txt' : 'answer'" 
                         class="box">
 
-                            <div>{{info.message}}</div> 
+                            <div class="arrow-txt">
+                                <div>{{info.message}}</div> 
+                                <a href="#"><i class="fa-solid fa-angle-down"></i>
+                                    <ul class="sub-menu">
+                                        <a href="#"><li>Message info</li></a>
+                                        <a href="#"><li>Delete message</li></a>
+                                    </ul>
+                                </a>   
+                            </div>
                             <div class="time">12:00</div> 
 
                         </div>

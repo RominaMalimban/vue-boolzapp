@@ -13,6 +13,14 @@ img{
     max-width: 100%;
 }
 
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
 /* regole header */
 #app{
     position: relative;
@@ -104,6 +112,7 @@ i{
     padding: 10px;
     color: #8edafc;
 }
+
 .msg-notifications a, .msg-notifications span{
     display: block;
     font-size: 13px;
@@ -124,12 +133,12 @@ i{
 .search input{
     width: 100%;
     height: 30px;
-    border-color: #b1b1b1 #b1b1b1 #b1b1b1 white;
+    border-color: #b1b1b1 #b1b1b1 #b1b1b1 #fff;
     padding-left: 15px;
 }
 
 .search i{
-    border-color: #b1b1b1  white #b1b1b1 #b1b1b1;
+    border-color: #b1b1b1  #fff #b1b1b1 #b1b1b1;
     height: 30px;
     line-height: 30px;
     color: #b1b1b1 ;
@@ -170,8 +179,13 @@ i{
     padding: 15px;
 }
 
+.sub-menu a li:hover,
 .chat-message:hover{
     background-color: #e9ebeb;
+}
+
+.d-none{
+    display: none;
 }
 
 .chat-info{
@@ -214,6 +228,38 @@ i{
 .box{
     padding: 5px 10px;
     margin: 10px 0;
+    position: relative;
+}
+
+.arrow-txt{
+    display: flex;
+}
+
+.arrow-txt i{
+    margin-left: 10px;
+}
+
+.sub-menu{
+    position: absolute;
+    background-color: #ffffffb9;
+    border-radius: 3px;
+    top: 20px;
+    right: -70px;
+    margin-right: 20px;
+    z-index: 100;
+    display: none;
+}
+
+.fa-angle-down:hover .sub-menu{
+    display: block;
+}
+
+.sub-menu li{
+    padding: 5px 10px;
+}
+
+.sub-menu a{
+    color: #000;
 }
 
 .time{
@@ -229,7 +275,7 @@ i{
     color: #6b7376;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 
 .area-message i{
@@ -238,11 +284,9 @@ i{
 
 .area-message input{
     flex-grow: 1;
-    margin-inline: 15px;
+    margin-inline: 30px;
     height: 40px;
-    padding: 5px;
-}
-
-.d-none{
-    display: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
 }
