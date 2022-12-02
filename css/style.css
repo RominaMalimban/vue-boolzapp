@@ -247,11 +247,6 @@ i{
     right: -70px;
     margin-right: 20px;
     z-index: 100;
-    display: none;
-}
-
-.fa-angle-down:hover .sub-menu{
-    display: block;
 }
 
 .sub-menu li{
@@ -289,4 +284,8 @@ i{
     padding: 5px 15px;
     border-radius: 5px;
     border: 1px solid #fff;
+}
+
+.block{
+    display: block;
 }

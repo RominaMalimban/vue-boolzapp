@@ -113,11 +113,14 @@
 
                             <div class="arrow-txt">
                                 <div>{{info.message}}</div> 
-                                <a href="#"><i class="fa-solid fa-angle-down"></i>
-                                    <ul class="sub-menu">
-                                        <a href="#"><li>Message info</li></a>
-                                        <a href="#"><li>Delete message</li></a>
-                                    </ul>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-down" @click="menuMessageClick(info)"></i>
+                                        <ul 
+                                        class="sub-menu"
+                                        v-if="info.dropDownMenu">
+                                            <a href="#"><li>Message info</li></a>
+                                            <a href="#" @click="deleteMessage(index)"><li>Delete message</li></a>
+                                        </ul>
                                 </a>   
                             </div>
                             <div class="time">12:00</div> 
