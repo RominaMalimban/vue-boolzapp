@@ -245,11 +245,11 @@ createApp({
         },
 
         // Metodo per far comparire il dropdown menu sui singoli messaggi:
-        menuMessageClick(info){
-            if(info.dropDownMenu === true){
-                info.dropDownMenu = false;
+        menuMessageClick(message){
+            if(message.dropDownMenu === true){
+                message.dropDownMenu = false;
             }else{
-                info.dropDownMenu = true;
+                message.dropDownMenu = true;
             };
         },
 

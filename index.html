@@ -107,17 +107,17 @@
                     <!-- messaggi chat -->
                     <div class="conversation">
                         <div 
-                        v-for="info in contacts[activeChat].messages" 
-                        :class="info.status === 'sent' ? 'my-txt' : 'answer'" 
+                        v-for="(message, index) in contacts[activeChat].messages" 
+                        :class="message.status === 'sent' ? 'my-txt' : 'answer'" 
                         class="box">
 
                             <div class="arrow-txt">
-                                <div>{{info.message}}</div> 
+                                <div>{{message.message}}</div> 
                                 <a href="#">
-                                    <i class="fa-solid fa-angle-down" @click="menuMessageClick(info)"></i>
+                                    <i class="fa-solid fa-angle-down" @click="menuMessageClick(message)"></i>
                                         <ul 
                                         class="sub-menu"
-                                        v-if="info.dropDownMenu">
+                                        v-if="message.dropDownMenu">
                                             <a href="#"><li>Message info</li></a>
                                             <a href="#" @click="deleteMessage(index)"><li>Delete message</li></a>
                                         </ul>
